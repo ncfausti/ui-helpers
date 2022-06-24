@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+div {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transition: height 500ms;
+}
+
+.hidden {
+  height: 300px;
+}
+.blue { background: blue; }
+.green { background: green; }
+
+
+</style>
+
+<script>
+function toggleClassOnID(classname, id) {
+
+  const container = document.querySelector(`#${id}`);
+  if (container.classList.contains(classname)) { 
+  	container.classList.remove('hidden');
+  }
+  else {
+  	container.classList.add('hidden');
+  }
+}
+</script>
+</head>
+<body>
+
+<h1>The transition Property</h1>
+<button onclick="toggleClassOnID('hidden', 'participants')">Participants</button>
+<button onclick="toggleClassOnID('hidden', 'graphs')">Graphs</button>
+
+<p>Hover over the div element below, to see the transition effect:</p>
+
+<div id="participants" class="hidden green"></div>
+<div id="graphs" class="hidden blue"></div>
+
+</body>
+</html>
+
+
