@@ -1,11 +1,10 @@
-function toggleClass(id, classname) {
+function toggleClassOnID(classname, id) {
 
-  var container = document.querySelector(`#${id}`);
-  
+  const container = document.querySelector(`#${id}`);
   if (container.classList.contains(classname)) { 
-  	container.classList.remove(classname);
+  	container.classList.remove('hidden');
   }
   else {
-  	container.classList.add(classname);
+  	container.classList.add('hidden');
   }
 }
